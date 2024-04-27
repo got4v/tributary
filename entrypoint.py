@@ -1,10 +1,10 @@
-# import the flask web framework
-from flask import Flask
+# import dependencies
 import json
 import redis as redis
 from flask import Flask, request
 from loguru import logger
 
+# define constants
 HISTORY_LENGTH = 10
 DATA_KEY = "engine_temperature"
 
@@ -34,7 +34,7 @@ def record_engine_temperature():
     return {"success": True}, 200
 
 
-# practically identical to the above
+# we'll implement this in the next step!
 @app.route('/collect', methods=['POST'])
 def collect_engine_temperature():
     return {"success": True}, 200
